@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![DumbleData Logo](path/to/logo.png)
-
 Uma aplicação CLI em Node.js que organiza arquivos de forma inteligente usando IA.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
