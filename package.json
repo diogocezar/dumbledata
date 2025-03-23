@@ -1,0 +1,30 @@
+{
+  "name": "dumbledata",
+  "version": "1.0.0",
+  "description": "CLI para organizar arquivos em diretórios",
+  "main": "index.js",
+  "bin": {
+    "dumbledata": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "file-organizer",
+    "node"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "exif-reader": "^2.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.6",
+    "mime-types": "^2.1.35",
+    "ora": "^5.4.1"
+  }
+}
