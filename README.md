@@ -78,7 +78,7 @@ node index.js [diretório]
 
 ## 📂 Estrutura de Pastas Resultante
 
-```
+```text
 diretório/
 ├── organized/
 │   ├── Imagens/
