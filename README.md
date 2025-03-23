@@ -1,82 +1,110 @@
 # 🧙‍♂️ DumbleData
 
-DumbleData é uma aplicação CLI em Node.js que organiza arquivos em um diretório especificado pelo usuário, utilizando inteligência artificial para determinar o contexto dos arquivos.
+<div align="center">
+
+![DumbleData Logo](path/to/logo.png)
+
+Uma aplicação CLI em Node.js que organiza arquivos de forma inteligente usando IA.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen.svg)](https://nodejs.org/)
+
+</div>
+
+---
+
+## 📋 Índice
+
+- [✨ Funcionalidades](#-funcionalidades)
+- [🚀 Instalação](#-instalação)
+- [🎮 Uso](#-uso)
+- [📂 Estrutura](#-estrutura)
+- [🧩 Como Funciona](#-como-funciona)
+- [🛠️ Tecnologias](#️-tecnologias)
+- [📝 Licença](#-licença)
 
 ## ✨ Funcionalidades
 
-- 📁 Organiza arquivos por tipo (Imagens, Vídeos, Músicas, Documentos, etc.)
-- 📅 Agrupa arquivos por ano
-- 🧠 Usa IA para determinar o contexto dos arquivos
-- 🏷️ Cria estrutura de pastas inteligente baseada em contextos
-- 🔄 Renomeia arquivos seguindo o padrão YYYYMMDD-nome.ext
-- 🔒 Preserva os arquivos originais (copia em vez de mover)
+- 📁 **Organização Inteligente**: Categoriza arquivos por tipo (Imagens, Vídeos, Músicas, etc.)
+- 📅 **Agrupamento Temporal**: Organiza arquivos por ano
+- 🧠 **Análise com IA**: Utiliza IA para determinar o contexto dos arquivos
+- 🏷️ **Estrutura Intuitiva**: Cria hierarquia de pastas baseada em contextos
+- 🔄 **Padronização**: Renomeia arquivos para o formato `YYYYMMDD-nome.ext`
+- 🔒 **Segurança**: Preserva os arquivos originais (copia em vez de mover)
 
 ## 🚀 Instalação
 
 ### Pré-requisitos
 
-- Node.js 14 ou superior
-- [Ollama](https://ollama.ai/) instalado e rodando localmente
-- Modelo `deepseek-r1:14b` instalado no Ollama
+| Requisito | Versão |
+|-----------|---------|
+| Node.js | ≥ 14.0.0 |
+| Ollama | Última versão |
+| Modelo IA | deepseek-r1:14b |
 
-### Instalação do Ollama e do modelo
+### 1. Instalação do Ollama
 
-1. Instale o Ollama seguindo as instruções em [ollama.ai](https://ollama.ai/)
-2. Abra um terminal e execute:
-   ```
+1. Baixe e instale o Ollama do [site oficial](https://ollama.ai/)
+2. Instale o modelo necessário:
+   ```bash
    ollama pull deepseek-r1:14b
    ```
-3. Inicie o servidor Ollama:
-   ```
+3. Inicie o servidor:
+   ```bash
    ollama serve
    ```
-start
-### Instalação do DumbleData
 
+### 2. Instalação do DumbleData
+
+```bash
 # Clone o repositório
 git clone https://github.com/seu-usuario/dumbledata.git
+
+# Entre no diretório
 cd dumbledata
 
 # Instale as dependências
 npm install
 
-# Instale globalmente (opcional)
+# (Opcional) Instale globalmente
 npm install -g .
 ```
 
 ## 🎮 Uso
 
-### Verificar se o Ollama está rodando
+### Verificação do Servidor
 
-Antes de usar o DumbleData, certifique-se de que o servidor Ollama está rodando:
+Antes de usar, verifique se o Ollama está rodando:
 
-```
+```bash
 curl http://localhost:11434/api/tags
 ```
 
-Se você receber uma resposta JSON, o servidor está funcionando corretamente.
+### Comandos Disponíveis
 
-### Executar o DumbleData
-
-```
-# Se instalado globalmente
+```bash
+# Uso global
 dumbledata [diretório]
 
-# Ou usando npm
+# Uso com npm
 npm start -- [diretório]
 
-# Ou diretamente
+# Uso direto
 node index.js [diretório]
 ```
 
 ### Opções
 
-- `[diretório]`: Caminho do diretório a ser organizado. Se não for fornecido, será solicitado.
-- `-y, --yes`: Pula a confirmação antes de iniciar a organização.
-- `-V, --version`: Exibe a versão da aplicação.
-- `-h, --help`: Exibe a ajuda.
+| Opção | Descrição |
+|-------|-----------|
+| `[diretório]` | Caminho do diretório a organizar |
+| `-y, --yes` | Pula confirmações |
+| `-V, --version` | Exibe a versão |
+| `-h, --help` | Mostra ajuda |
 
-## 📂 Estrutura de Pastas Resultante
+## 📂 Estrutura
+
+Após a execução, seus arquivos serão organizados assim:
 
 ```
 diretório/
@@ -93,8 +121,7 @@ diretório/
 │   │   └── ...
 │   ├── Músicas/
 │   │   └── ...
-│   └── ...
-└── ... (arquivos originais)
+│   └── ... (arquivos originais)
 ```
 
 ## 🧩 Como Funciona
